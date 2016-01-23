@@ -561,7 +561,7 @@
         local.validate(para, zerowidth, realfont, local, timeout);
       };
       //setTimeout(delayedValidate, 50);
-      
+
       window.requestAnimationFrame(delayedValidate);
     }
   };
