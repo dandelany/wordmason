@@ -101,7 +101,7 @@ class Label extends React.Component {
             height,
             width,
             opacity: 0.5,
-            //background: color,
+            background: color,
             zIndex: 9
         });
         const textStyle = _.assign({}, style, {
@@ -165,15 +165,17 @@ class App extends React.Component {
     }
     addLabel() {
         const {fonts, phrases} = this.props;
-        const {labels} = this.state;
-        const labelCount = labels.length;
         //const phrase = phrases[labels.length];
         const phrase = randomPhrases(1)[0];
         const font = _.sample(fonts);
         const size = _.random(6, 52);
         const color = randomColors(1)[0];
+
+        let {labels} = this.state;
+        if(labels.length > 400) labels = [];
+        const labelCount = labels.length;
         const newLabels = addLabelToLayout(labels, {phrase, font, size, color});
-        console.log(newLabels.length);
+
         if(newLabels.length > labelCount) {
             this.setState(
                 {labels: newLabels},
