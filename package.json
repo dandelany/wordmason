@@ -1,6 +1,6 @@
 {
-  "name": "opentype-test",
-  "description": "Testing OpenType.js",
+  "name": "wordmason",
+  "description": "Testing text measuring",
   "author": "Dan Delany <dan.delany@gmail.com>",
   "version": "0.0.1",
   "main": "lib/index.js",
